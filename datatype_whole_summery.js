@@ -47,3 +47,38 @@ const myFun = function(){                           //Functions
 // Object (native and does not implement [[Call]])	    "object"
 // Object (native or host and does implement [[Call]])	"function"
 // Object (host and does not implement [[Call]])	Implementation-defined except may not be "undefined", "boolean", "number", or "string".
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Memory types - Heap, stack
+
+// Stack (Primitive) , Heap (Non- Primitive)
+
+// Stack - copy of value
+
+// Heap - Reference of value
+
+
+let myname = "satyam"               // - stack
+let anothername = myname
+anothername = "helllooo" 
+
+console.log(myname)
+console.log(anothername);
+
+
+
+let user1 = {                       // - Heap
+    email : "saty@gmail.com",   
+    age: 21
+}
+
+let user2 = user1
+
+user2.email = "satyamchouksey@gmail.com"
+
+console.log(user1.email)
+console.log(user2.email);
