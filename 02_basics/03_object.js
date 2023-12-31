@@ -22,8 +22,8 @@ const JsUser = {
 // console.log(JsUser["email"]);
 // console.log(JsUser["fullname"]);
 
-console.log(JsUser[mySym]);
-console.log(typeof JsUser[mySym]);
+// console.log(JsUser[mySym]);
+// console.log(typeof JsUser[mySym]);
 
 // agar object mai kisi value ko change karna ho to wo "over-write" ho jati hai **
 JsUser.email = "satychouksey@gmail.com"
@@ -32,8 +32,21 @@ console.log(JsUser["email"]);
 
 // Agar hume object mai koi change na kar sake to uske liye hume usse freeze karna padta hai
 
-Object.freeze(JsUser)
+// Object.freeze(JsUser)
 
-JsUser.email = "satyhjkshajkhchouksey@gmail.com"
+// JsUser.email = "satyhjkshajkhchouksey@gmail.com"
 
-console.log(JsUser);
+// console.log(JsUser);
+
+// functions
+
+JsUser.greeting = function(){
+    console.log("Hello JS user");
+}
+
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS User, ${this.name}`);
+}
+
+console.log(JsUser.greeting())
+console.log(JsUser.greetingTwo());
