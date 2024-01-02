@@ -14,3 +14,7 @@
     console.log(`DB Connected TWO`)
 })();
 
+((name)=>{
+    console.log(`DB Connected TWO ${name}`)
+})('Satyam');
+
